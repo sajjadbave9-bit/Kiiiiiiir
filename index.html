@@ -4,188 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI-App | دنیای هوشمند</title>
+    <title>Kiiiiiiir AI</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="navbar">
-        <a href="#" class="logo">✦ AI-App</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🤖 Kiiiiiiir AI</div>
 
-        <nav>
+        <div class="nav-links">
             <a href="#home">خانه</a>
-            <a href="#features">امکانات</a>
+            <a href="#generator">سازنده کد</a>
             <a href="#about">درباره</a>
-        </nav>
-
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    </header>
+        </div>
+    </nav>
 
 
-    <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
 
-        <section id="home" class="hero">
+        <div class="hero-content">
 
-            <div class="hero-content">
-
-                <span class="badge">⚡ نسل جدید تکنولوژی</span>
-
-                <h1>
-                    ایده‌هات رو
-                    <span>واقعی کن</span>
-                </h1>
-
-                <p>
-                    به دنیای AI-App خوش اومدی؛
-                    جایی برای ساختن، تجربه کردن و تبدیل ایده‌ها
-                    به پروژه‌های خفن.
-                </p>
-
-                <div class="hero-buttons">
-                    <button class="primary-btn" onclick="startProject()">
-                        🚀 شروع کنیم
-                    </button>
-
-                    <button class="secondary-btn" onclick="showInfo()">
-                        بیشتر بدانید
-                    </button>
-                </div>
-
+            <div class="badge">
+                ✨ نسل جدید ساخت کد
             </div>
 
-            <div class="hero-card">
+            <h1>
+                ایده‌ات رو بگو،
+                <span>کدت رو تحویل بگیر!</span>
+            </h1>
 
-                <div class="orb"></div>
+            <p>
+                با Kiiiiiiir AI ایده‌ات رو به کد تبدیل کن.
+                HTML، CSS و JavaScript رو سریع بساز.
+            </p>
 
-                <div class="ai-box">
-                    <div class="ai-icon">🤖</div>
+            <a href="#generator" class="main-button">
+                🚀 شروع ساخت کد
+            </a>
 
-                    <h3>AI-App</h3>
+        </div>
 
-                    <p>
-                        آینده همینجاست...
-                    </p>
-
-                    <div class="loading">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
+    </section>
 
 
-        <section id="features" class="features">
+    <!-- Generator -->
+    <section id="generator" class="generator-section">
 
-            <div class="section-title">
-                <span>✨ امکانات</span>
+        <div class="section-title">
+            <span>⚡ AI CODE GENERATOR</span>
 
-                <h2>
-                    همه چیز برای
-                    <strong>شروع</strong>
-                </h2>
+            <h2>
+                چی می‌خوای بسازیم؟
+            </h2>
 
-                <p>
-                    ابزارهایی که پروژه‌ات رو جذاب‌تر می‌کنن.
-                </p>
-            </div>
-
-
-            <div class="cards">
-
-                <article class="card">
-                    <div class="card-icon">🤖</div>
-
-                    <h3>هوش مصنوعی</h3>
-
-                    <p>
-                        ایده‌های خودت رو به پروژه‌های جدید تبدیل کن.
-                    </p>
-                </article>
+            <p>
+                درخواستت رو بنویس و نوع کد رو انتخاب کن.
+            </p>
+        </div>
 
 
-                <article class="card">
-                    <div class="card-icon">⚡</div>
+        <div class="generator-box">
 
-                    <h3>سرعت بالا</h3>
+            <!-- Prompt -->
+            <label for="prompt">
+                🧠 توضیح پروژه
+            </label>
 
-                    <p>
-                        سریع، سبک و مناسب برای موبایل و کامپیوتر.
-                    </p>
-                </article>
-
-
-                <article class="card">
-                    <div class="card-icon">🎨</div>
-
-                    <h3>طراحی خفن</h3>
-
-                    <p>
-                        رابط کاربری مدرن با انیمیشن‌های جذاب.
-                    </p>
-                </article>
+            <textarea
+                id="prompt"
+                placeholder="مثلاً: یک صفحه ورود خفن با پس‌زمینه متحرک بساز..."
+            ></textarea>
 
 
-                <article class="card">
-                    <div class="card-icon">🌐</div>
+            <!-- Code Type -->
+            <label for="codeType">
+                💻 نوع کد
+            </label>
 
-                    <h3>آنلاین</h3>
-
-                    <p>
-                        آماده برای اتصال به امکانات و سرویس‌های آنلاین.
-                    </p>
-                </article>
-
-            </div>
-
-        </section>
+            <select id="codeType">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
 
 
-        <section id="about" class="about">
+            <!-- Generate -->
+            <button class="generate-button" onclick="generateCode()">
+                ⚡ ساخت کد
+            </button>
 
-            <div class="about-box">
+        </div>
 
-                <span>🚀 AI-App</span>
 
-                <h2>
-                    این فقط
-                    <span>شروعشه!</span>
-                </h2>
+        <!-- Result -->
+        <div class="result-box">
 
-                <p>
-                    این پروژه قراره کم‌کم بزرگ‌تر بشه و
-                    امکانات بیشتری بهش اضافه کنیم.
-                </p>
+            <div class="result-header">
 
-                <button class="primary-btn" onclick="showInfo()">
-                    درباره پروژه
+                <span>
+                    📄 کد ساخته‌شده
+                </span>
+
+                <button onclick="copyCode()">
+                    📋 کپی
                 </button>
 
             </div>
 
-        </section>
+            <pre id="codeResult"><code>
+کدی که ساخته می‌شود اینجا نمایش داده می‌شود...
+            </code></pre>
 
-    </main>
-
-
-    <footer>
-
-        <div class="footer-logo">
-            ✦ AI-App
         </div>
 
+
+        <!-- Preview -->
+        <div class="preview-box">
+
+            <div class="result-header">
+
+                <span>
+                    👁️ پیش‌نمایش
+                </span>
+
+            </div>
+
+            <iframe
+                id="preview"
+                title="Preview"
+            ></iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>🤖 درباره Kiiiiiiir AI</h2>
+
         <p>
-            ساخته شده با ❤️
+            یک ابزار ساده و سریع برای تبدیل ایده‌ها
+            به کدهای HTML، CSS و JavaScript.
         </p>
 
-        <small>
-            © 2026 AI-App
-        </small>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            ساخته شده با ❤️ توسط Kiiiiiiir
+        </p>
 
     </footer>
 
